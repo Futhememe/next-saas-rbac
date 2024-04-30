@@ -18,14 +18,6 @@ export * from './models/organization'
 export * from './models/project'
 export * from './models/user'
 
-// type AppAbilities =
-//   | UserSubject
-//   | ProjectSubject
-//   | OrganizationSubject
-//   | InviteSubject
-//   | BillingSubject
-//   | ['manage', 'all']
-
 const appAbilitiesSchema = z.union([
   projectSubject,
   userSubject,
