@@ -12,6 +12,7 @@ import {
 
 import { errorHandler } from './error-handler'
 import {
+  authenticateWithGithub,
   authenticateWithPassword,
   createAccount,
   getProfile,
@@ -53,6 +54,7 @@ app.register(authenticateWithPassword)
 app.register(getProfile)
 app.register(requestPasswordRecover)
 app.register(resetPassword)
+app.register(authenticateWithGithub)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP Server running')
