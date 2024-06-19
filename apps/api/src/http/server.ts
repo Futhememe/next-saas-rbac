@@ -25,6 +25,7 @@ import {
   getMembership,
   getOrganization,
   getOrganizations,
+  shutdownOrganization,
   updateOrganization,
 } from './routes/orgs'
 
@@ -77,6 +78,7 @@ app.register(getMembership)
 app.register(getOrganization)
 app.register(getOrganizations)
 app.register(updateOrganization)
+app.register(shutdownOrganization)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log('HTTP Server running')
