@@ -20,7 +20,7 @@ import {
   requestPasswordRecover,
   resetPassword,
 } from './routes/auth'
-import { createInvite } from './routes/invites'
+import { createInvite, getInvite } from './routes/invites'
 import { getMembers, removeMember, updateMember } from './routes/members'
 import {
   createOrganization,
@@ -102,6 +102,7 @@ app.register(updateMember)
 app.register(removeMember)
 
 app.register(createInvite)
+app.register(getInvite)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log('HTTP Server running')
