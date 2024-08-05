@@ -1,5 +1,4 @@
-'use client'
-import { GithubLogo } from '@phosphor-icons/react'
+// import { GithubLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
@@ -41,7 +40,7 @@ export default function SignUpPage() {
 
       <Separator />
       <Button type="submit" variant="outline" className="w-full ">
-        <GithubLogo size={16} className="mr-2" />
+        {/* <GithubLogo size={16} className="mr-2" /> */}
         Sign up with Github
       </Button>
     </form>
