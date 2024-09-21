@@ -1,16 +1,23 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
+
+import { isAuthenticated } from '@/auth/auth'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  if (isAuthenticated()) {
+    redirect('/')
+  }
+
   return (
     <html lang="en" className="dark">
       <body>{children}</body>
